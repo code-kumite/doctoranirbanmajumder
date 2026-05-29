@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Dynamic Semantic Variables mapped to Tailwind CSS tokens */
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-main: var(--border-main);
+  --color-border-subtle: var(--border-subtle);
+  
+  --color-brand-950: var(--brand-950);
+  --color-brand-900: var(--brand-900);
+  --color-brand-850: var(--brand-850);
+  --color-brand-800: var(--brand-800);
+  --color-brand-700: var(--brand-700);
+  --color-brand-650: var(--brand-650);
+  --color-brand-600: var(--brand-600);
+  --color-brand-500: var(--brand-500);
+  --color-brand-400: var(--brand-400);
+  --color-brand-300: var(--brand-300);
+  --color-brand-200: var(--brand-200);
+  --color-brand-100: var(--brand-100);
+  --color-brand-50: var(--brand-50);
+  
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-dark: var(--accent-teal-dark);
+  --color-accent-teal-light: var(--accent-teal-light);
+
+  /* Reduced border-radiuses for a sleeker, sharper, premium aesthetic */
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+  --radius-3xl: 12px;
+}
+
+/* Base Theme Variable Configurations */
+:root {
+  /* PREMIUM DARK THEME (Vibrant luxury glowing purple-pink) */
+  --surface-primary: #030014;
+  --surface-alt: #060515;
+  --surface-secondary: rgba(12, 10, 33, 0.55);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-main: rgba(124, 58, 237, 0.22);
+  --border-subtle: rgba(124, 58, 237, 0.11);
+  
+  --brand-950: #030014;
+  --brand-900: #7c3aed;
+  --brand-850: #8b5cf6;
+  --brand-800: #a78bfa;
+  --brand-700: #ec4899;
+  --brand-650: #d946ef;
+  --brand-600: #6366f1;
+  --brand-500: #4f46e5;
+  --brand-400: #1e1b4b;
+  --brand-300: #111029;
+  --brand-200: #0a081f;
+  --brand-100: #060515;
+  --brand-50: #080711;
+  
+  --accent-teal: #f472b6;
+  --accent-teal-dark: #db2777;
+  --accent-teal-light: #fce7f3;
+
+  --grid-color: rgba(124, 58, 237, 0.04);
+  
+  /* Hero composite card values for dark mode contrast */
+  --card-bg: rgba(18, 15, 46, 0.9);
+  --card-border: rgba(124, 58, 237, 0.4);
+  --card-gradient-from: #1a163f;
+  --card-gradient-via: #120f2d;
+  --card-gradient-to: rgba(124, 58, 237, 0.3);
+  --left-blend-start: #120f2d;
+  --bottom-blend-start: rgba(167, 139, 250, 0.15);
+
+  --text-gradient-hero: linear-gradient(135deg, #c084fc 10%, #ec4899 50%, #6366f1 90%);
+  --text-gradient-sub: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--surface-primary);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings with premium serif styling */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--text-main);
+}
+
+/* Custom premium backdrop grid overlay */
+.bg-grid-premium {
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Modern sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-800);
+}
+
+/* Dynamic text gradients */
+.text-gradient-purple-pink {
+  background: var(--text-gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-violet-fuchsia {
+  background: var(--text-gradient-sub);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Accessibility focus styles */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible, 
+textarea:focus-visible, 
+select:focus-visible {
+  outline: 2px solid var(--color-brand-800);
+  outline-offset: 2px;
+}
+
+/* Bootstrap-like list-group flat border items */
+.bootstrap-list-group {
+  border: 1px solid var(--border-main);
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.bootstrap-list-item {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.bootstrap-list-item:last-child {
+  border-bottom: none;
+}
+
+.bootstrap-list-item:hover {
+  background-color: rgba(124, 58, 237, 0.05);
+}
