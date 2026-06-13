@@ -60,76 +60,22 @@
 
 /* Base Theme Variable Configurations */
 :root {
-  /* PREMIUM DARK THEME (Vibrant luxury glowing purple-pink) */
-  --surface-primary: #030014;
-  --surface-alt: #060515;
-  --surface-secondary: rgba(12, 10, 33, 0.55);
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --border-main: rgba(124, 58, 237, 0.22);
-  --border-subtle: rgba(124, 58, 237, 0.11);
-  
-  --brand-950: #030014;
-  --brand-900: #7c3aed;
-  --brand-850: #8b5cf6;
-  --brand-800: #a78bfa;
-  --brand-700: #ec4899;
-  --brand-650: #d946ef;
-  --brand-600: #6366f1;
-  --brand-500: #4f46e5;
-  --brand-400: #1e1b4b;
-  --brand-300: #111029;
-  --brand-200: #0a081f;
-  --brand-100: #060515;
-  --brand-50: #080711;
-  
-  --accent-teal: #f472b6;
-  --accent-teal-dark: #db2777;
-  --accent-teal-light: #fce7f3;
-
-  /* Slate colors dark mode defaults */
-  --slate-100: #f1f5f9;
-  --slate-150: #e8ecf4;
-  --slate-200: #e2e8f0;
-  --slate-300: #cbd5e1;
-  --slate-350: #b8c5d6;
-  --slate-400: #94a3b8;
-  --slate-450: #7e8f9f;
-  --slate-500: #64748b;
-  --slate-600: #475569;
-
-  --grid-color: rgba(124, 58, 237, 0.04);
-  
-  /* Hero composite card values for dark mode contrast */
-  --card-bg: rgba(18, 15, 46, 0.9);
-  --card-border: rgba(124, 58, 237, 0.4);
-  --card-gradient-from: #1a163f;
-  --card-gradient-via: #120f2d;
-  --card-gradient-to: rgba(124, 58, 237, 0.3);
-  --left-blend-start: #120f2d;
-  --bottom-blend-start: rgba(167, 139, 250, 0.15);
-
-  --text-gradient-hero: linear-gradient(135deg, #c084fc 10%, #ec4899 50%, #6366f1 90%);
-  --text-gradient-sub: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
-}
-
-:root[data-theme="light"] {
-  /* CLINICAL TRUST LIGHT THEME (Soft clean slate base, rich brand tones, premium medical aesthetic) */
+  /* CLINICAL TRUST LIGHT BLUE THEME (Premium medical aesthetic) */
   --surface-primary: #f8fafc;
   --surface-alt: #f1f5f9;
-  --surface-secondary: rgba(255, 255, 255, 0.75);
+  --surface-secondary: rgba(255, 255, 255, 0.85);
   --text-main: #0f172a;
   --text-muted: #475569;
-  --border-main: rgba(124, 58, 237, 0.16);
-  --border-subtle: rgba(124, 58, 237, 0.08);
+  --border-main: rgba(37, 99, 235, 0.16);
+  --border-subtle: rgba(37, 99, 235, 0.08);
   
   --brand-950: #f8fafc;
-  --brand-900: #5b21b6;
-  --brand-850: #6d28d9;
-  --brand-800: #7c3aed;
-  --brand-700: #db2777;
-  --brand-650: #c026d3;
-  --brand-600: #4f46e5;
+  --brand-900: #1e3a8a;
+  --brand-850: #1d4ed8;
+  --brand-800: #2563eb;
+  --brand-700: #3b82f6;
+  --brand-650: #60a5fa;
+  --brand-600: #2563eb;
   --brand-500: #3b82f6;
   --brand-400: #e2e8f0;
   --brand-300: #cbd5e1;
@@ -152,19 +98,71 @@
   --slate-500: #64748b;
   --slate-600: #8c9ba5;
 
-  --grid-color: rgba(124, 58, 237, 0.02);
+  --grid-color: rgba(37, 99, 235, 0.02);
   
   /* Hero composite card values for light mode contrast */
   --card-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(124, 58, 237, 0.12);
+  --card-border: rgba(37, 99, 235, 0.12);
   --card-gradient-from: #f8fafc;
   --card-gradient-via: #f1f5f9;
-  --card-gradient-to: rgba(124, 58, 237, 0.05);
+  --card-gradient-to: rgba(37, 99, 235, 0.05);
   --left-blend-start: #f1f5f9;
-  --bottom-blend-start: rgba(124, 58, 237, 0.03);
+  --bottom-blend-start: rgba(37, 99, 235, 0.03);
 
-  --text-gradient-hero: linear-gradient(135deg, #4f46e5 10%, #db2777 50%, #7c3aed 90%);
-  --text-gradient-sub: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  --text-gradient-hero: linear-gradient(135deg, #1e3a8a 10%, #0284c7 50%, #2563eb 90%);
+  --text-gradient-sub: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+}
+
+:root[data-theme="light"] {
+  /* Fallback selector mapping identical variables to avoid theme-state discrepancies */
+  --surface-primary: #f8fafc;
+  --surface-alt: #f1f5f9;
+  --surface-secondary: rgba(255, 255, 255, 0.85);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-main: rgba(37, 99, 235, 0.16);
+  --border-subtle: rgba(37, 99, 235, 0.08);
+  
+  --brand-950: #f8fafc;
+  --brand-900: #1e3a8a;
+  --brand-850: #1d4ed8;
+  --brand-800: #2563eb;
+  --brand-700: #3b82f6;
+  --brand-650: #60a5fa;
+  --brand-600: #2563eb;
+  --brand-500: #3b82f6;
+  --brand-400: #e2e8f0;
+  --brand-300: #cbd5e1;
+  --brand-200: #f1f5f9;
+  --brand-100: #f8fafc;
+  --brand-50: #f8fafc;
+  
+  --accent-teal: #0d9488;
+  --accent-teal-dark: #0f766e;
+  --accent-teal-light: #ccfbf1;
+
+  --slate-100: #0f172a;
+  --slate-150: #1e293b;
+  --slate-200: #1e293b;
+  --slate-300: #334155;
+  --slate-350: #3e4e61;
+  --slate-400: #475569;
+  --slate-450: #54667a;
+  --slate-500: #64748b;
+  --slate-600: #8c9ba5;
+
+  --grid-color: rgba(37, 99, 235, 0.02);
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(37, 99, 235, 0.12);
+  --card-gradient-from: #f8fafc;
+  --card-gradient-via: #f1f5f9;
+  --card-gradient-to: rgba(37, 99, 235, 0.05);
+  --left-blend-start: #f1f5f9;
+  --bottom-blend-start: rgba(37, 99, 235, 0.03);
+
+  --text-gradient-hero: linear-gradient(135deg, #1e3a8a 10%, #0284c7 50%, #2563eb 90%);
+  --text-gradient-sub: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
 }
 
 body {

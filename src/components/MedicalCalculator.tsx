@@ -232,15 +232,15 @@ export default function MedicalCalculator() {
               <div className="border border-brand-400/30 rounded-lg p-4 bg-surface-alt/50 text-xs">
                 <div className="font-semibold text-brand-800 mb-2">Clinical Interpretation Guidance:</div>
                 <div className="grid grid-cols-3 gap-2 text-center pt-2 text-[10px]">
-                  <div className={`p-2 rounded border ${parseFloat(hba1c) < 5.7 ? 'bg-emerald-950/30 border-emerald-800/40 text-emerald-400 font-bold' : 'bg-brand-100/10 border-brand-300/10 text-slate-400'}`}>
+                  <div className={`p-2 rounded border ${parseFloat(hba1c) < 5.7 ? 'bg-emerald-50 border-emerald-200 text-emerald-700 font-bold' : 'bg-slate-50 border-slate-100 text-slate-400'}`}>
                     Normal
                     <span className="block font-mono font-semibold text-[9px] mt-0.5">&lt; 5.7%</span>
                   </div>
-                  <div className={`p-2 rounded border ${parseFloat(hba1c) >= 5.7 && parseFloat(hba1c) < 6.5 ? 'bg-yellow-950/30 border-yellow-800/40 text-yellow-400 font-bold' : 'bg-brand-100/10 border-brand-300/10 text-slate-400'}`}>
+                  <div className={`p-2 rounded border ${parseFloat(hba1c) >= 5.7 && parseFloat(hba1c) < 6.5 ? 'bg-amber-50 border-amber-200 text-amber-700 font-bold' : 'bg-slate-50 border-slate-100 text-slate-400'}`}>
                     Pre-Diabetes
                     <span className="block font-sans font-semibold text-[9px] mt-0.5">5.7% - 6.4%</span>
                   </div>
-                  <div className={`p-2 rounded border ${parseFloat(hba1c) >= 6.5 ? 'bg-red-950/30 border-red-800/40 text-red-400 font-bold' : 'bg-brand-100/10 border-brand-300/10 text-slate-400'}`}>
+                  <div className={`p-2 rounded border ${parseFloat(hba1c) >= 6.5 ? 'bg-red-50 border-red-200 text-red-700 font-bold' : 'bg-slate-50 border-slate-100 text-slate-400'}`}>
                     Diabetes Range
                     <span className="block font-mono font-semibold text-[9px] mt-0.5">&ge; 6.5%</span>
                   </div>
@@ -528,10 +528,10 @@ export default function MedicalCalculator() {
                   {/* Gauge Header */}
                   <div className={`p-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-between border-b ${
                     riskAssessment.riskLevel === 'High'
-                      ? 'bg-red-950/20 border-red-800/40 text-red-400'
+                      ? 'bg-red-50 border-red-200 text-red-700'
                       : riskAssessment.riskLevel === 'Moderate'
-                      ? 'bg-yellow-950/20 border-yellow-800/40 text-yellow-400'
-                      : 'bg-emerald-950/20 border-emerald-800/40 text-emerald-400'
+                      ? 'bg-amber-50 border-amber-200 text-amber-700'
+                      : 'bg-emerald-50 border-emerald-200 text-emerald-700'
                   }`}>
                     <div className="flex items-center gap-2">
                       <ShieldAlert className="w-5 h-5 grow-0 shrink-0" />
@@ -542,10 +542,10 @@ export default function MedicalCalculator() {
                     </div>
                     <span className={`px-3 py-1 rounded-full text-[10px] font-extrabold font-serif shadow-sm uppercase tracking-widest border ${
                       riskAssessment.riskLevel === 'High'
-                        ? 'bg-red-900/40 border-red-700/45 text-white'
+                        ? 'bg-red-600 border-red-700 text-white'
                         : riskAssessment.riskLevel === 'Moderate'
-                        ? 'bg-yellow-900/40 border-yellow-700/45 text-white'
-                        : 'bg-emerald-900/40 border-emerald-700/45 text-white'
+                        ? 'bg-amber-600 border-amber-700 text-white'
+                        : 'bg-emerald-600 border-emerald-700 text-white'
                     }`}>
                       {riskAssessment.riskLevel} CLINICAL RISK Level
                     </span>

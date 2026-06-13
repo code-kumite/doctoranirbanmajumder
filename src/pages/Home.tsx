@@ -263,7 +263,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <path 
                     d="M 10 180 L 80 180 L 88 172 L 96 192 L 104 180 L 120 180 L 128 140 L 138 230 L 148 170 L 158 185 L 166 180 L 220 180 L 228 172 L 236 192 L 244 180 L 260 180 L 268 140 L 278 230 L 288 170 L 298 185 L 306 180 L 390 180" 
                     fill="none" 
-                    stroke="#ec4899" 
+                    stroke="#ef4444" 
                     strokeWidth="2.5" 
                     filter="url(#ecgGlow)"
                     strokeLinecap="round" 
@@ -271,10 +271,10 @@ export default function Home({ onNavigate }: HomeProps) {
                     className="sweep-line"
                   />
 
-                  <circle cx="138" cy="230" r="4" className="fill-brand-700 blink-led-1" />
+                  <circle cx="138" cy="230" r="4" className="fill-red-500 blink-led-1" />
                   <circle cx="138" cy="230" r="1" className="fill-white" />
 
-                  <circle cx="278" cy="230" r="4" className="fill-brand-700 blink-led-2" />
+                  <circle cx="278" cy="230" r="4" className="fill-red-500 blink-led-2" />
                   <circle cx="278" cy="230" r="1" className="fill-white" />
                 </svg>
                 

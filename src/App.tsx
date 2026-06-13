@@ -19,21 +19,6 @@ import Contact from './pages/Contact';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<AppRoute>('/');
-  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme;
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
-    return 'dark';
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
 
   // Route match validator
   const getRouteFromHash = (): AppRoute => {
@@ -114,7 +99,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-surface-primary text-slate-200 transition-colors duration-300 bg-grid-premium">
-      <Header currentRoute={currentRoute} onNavigate={navigateTo} theme={theme} onToggleTheme={toggleTheme} />
+      <Header currentRoute={currentRoute} onNavigate={navigateTo} />
       
       {/* Dynamic page placeholder */}
       <main className="flex-grow">
