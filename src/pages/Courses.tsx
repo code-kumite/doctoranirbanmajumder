@@ -43,7 +43,7 @@ export default function Courses({ onNavigate }: CoursesProps) {
       <JsonLd schema={courseSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30 inline-block">
@@ -60,7 +60,7 @@ export default function Courses({ onNavigate }: CoursesProps) {
       </section>
 
       {/* DETAILED COURSE GRID */}
-      <section className="py-16 sm:py-24 bg-[#060515] border-b border-brand-400/35" aria-labelledby="courses-heading">
+      <section className="py-16 sm:py-24 bg-surface-alt border-b border-brand-400/35" aria-labelledby="courses-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="courses-heading" className="sr-only">Course Listings</h2>
 
@@ -125,7 +125,7 @@ export default function Courses({ onNavigate }: CoursesProps) {
       </section>
 
       {/* ACCORDION FAQ */}
-      <section className="py-16 bg-[#030014]" aria-labelledby="course-faq-heading">
+      <section className="py-16 bg-surface-primary" aria-labelledby="course-faq-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-3">
             <h2 id="course-faq-heading" className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight text-center">
@@ -138,7 +138,7 @@ export default function Courses({ onNavigate }: CoursesProps) {
       </section>
 
       {/* FOOTER CTA LINE CARD */}
-      <section className="py-16 bg-[#060515] border-t border-brand-400/30 text-center">
+      <section className="py-16 bg-surface-alt border-t border-brand-400/30 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
             Contribute to Advancing Regional Endocrinology

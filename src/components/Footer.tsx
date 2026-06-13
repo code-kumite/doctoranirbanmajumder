@@ -15,7 +15,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#030014]/95 text-slate-400 border-t border-brand-400/40 pt-16 pb-8 backdrop-blur-md relative z-10" aria-labelledby="footer-heading">
+    <footer className="bg-surface-primary/95 text-slate-400 border-t border-brand-400/40 pt-16 pb-8 backdrop-blur-md relative z-10" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

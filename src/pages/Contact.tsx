@@ -34,7 +34,7 @@ export default function Contact({ onNavigate }: ContactProps) {
       <JsonLd schema={contactSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30 inline-block">
@@ -51,7 +51,7 @@ export default function Contact({ onNavigate }: ContactProps) {
       </section>
 
       {/* TWO COLUMN DETAIL GRID */}
-      <section className="py-16 sm:py-24 bg-[#030014]" aria-labelledby="contact-grid-heading">
+      <section className="py-16 sm:py-24 bg-surface-primary" aria-labelledby="contact-grid-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="contact-grid-heading" className="sr-only">Contact Details & Appointment Form</h2>
 
@@ -154,7 +154,7 @@ export default function Contact({ onNavigate }: ContactProps) {
       </section>
 
       {/* EMBEDDED MAP DESCRIPTION STRAPLINE BACKGROUND */}
-      <section className="py-16 bg-[#060515] border-t border-b border-brand-400/30" aria-label="Find our clinic">
+      <section className="py-16 bg-surface-alt border-t border-b border-brand-400/30" aria-label="Find our clinic">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-[10px] tracking-wider uppercase font-extrabold text-slate-500 block text-center mb-4">
             Physiographic Location Map Guide
@@ -175,7 +175,7 @@ export default function Contact({ onNavigate }: ContactProps) {
       </section>
 
       {/* COMPLIANCE DISCLOSURE BLOCK PANEL */}
-      <section className="py-16 bg-[#030014]" aria-labelledby="compliance-heading">
+      <section className="py-16 bg-surface-primary" aria-labelledby="compliance-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
           <Info className="w-7 h-7 text-brand-850 mx-auto animate-pulse" />
           <h4 id="compliance-heading" className="font-serif text-lg sm:text-xl font-bold text-slate-100">

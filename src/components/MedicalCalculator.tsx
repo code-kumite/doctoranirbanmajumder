@@ -134,11 +134,11 @@ export default function MedicalCalculator() {
   };
 
   return (
-    <div className="bg-[#0c0a21]/80 backdrop-blur-md rounded-xl border border-brand-400/40 shadow-2xl overflow-hidden text-slate-200 relative z-10">
+    <div className="bg-surface-secondary backdrop-blur-md rounded-xl border border-brand-400/40 shadow-2xl overflow-hidden text-slate-200 relative z-10">
       
       {/* Header and navigation tabs */}
-      <div className="bg-[#0a081f] px-6 py-4 border-b border-brand-400/30">
-        <h3 className="text-white font-serif text-lg font-bold">
+      <div className="bg-surface-primary px-6 py-4 border-b border-brand-400/30">
+        <h3 className="text-slate-100 font-serif text-lg font-bold">
           Interactive Endocrine Utilities
         </h3>
         <p className="text-[11px] text-slate-400 mt-1">
@@ -146,12 +146,12 @@ export default function MedicalCalculator() {
         </p>
       </div>
 
-      <div className="flex border-b border-brand-400/30 bg-[#060515]/30">
+      <div className="flex border-b border-brand-400/30 bg-surface-alt/30">
         <button
           onClick={() => setActiveTab('hba1c')}
           className={`flex-1 py-3.5 px-4 text-xs sm:text-sm font-semibold tracking-wide uppercase transition border-b-2 flex items-center justify-center gap-2 cursor-pointer ${
             activeTab === 'hba1c'
-              ? 'border-brand-800 text-white bg-[#0c0a21]/50'
+              ? 'border-brand-800 text-slate-100 bg-surface-secondary/50'
               : 'border-transparent text-slate-500 hover:text-slate-350'
           }`}
         >
@@ -162,7 +162,7 @@ export default function MedicalCalculator() {
           onClick={() => setActiveTab('metabolic')}
           className={`flex-1 py-3.5 px-4 text-xs sm:text-sm font-semibold tracking-wide uppercase transition border-b-2 flex items-center justify-center gap-2 cursor-pointer ${
             activeTab === 'metabolic'
-              ? 'border-brand-800 text-white bg-[#0c0a21]/50'
+              ? 'border-brand-800 text-slate-100 bg-surface-secondary/50'
               : 'border-transparent text-slate-500 hover:text-slate-350'
           }`}
         >
@@ -198,7 +198,7 @@ export default function MedicalCalculator() {
                     placeholder="e.g., 7.0"
                     value={hba1c}
                     onChange={(e) => handleHbA1cChange(e.target.value)}
-                    className="w-full px-4 py-3 text-lg font-mono rounded-lg border border-brand-400/40 bg-brand-200/50 text-white placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none focus:ring-1 focus:ring-brand-800 transition shadow-inner"
+                    className="w-full px-4 py-3 text-lg font-mono rounded-lg border border-brand-400/40 bg-brand-200/50 text-slate-100 placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none focus:ring-1 focus:ring-brand-800 transition shadow-inner"
                   />
                   <span className="text-sm font-serif font-semibold text-brand-800">%</span>
                 </div>
@@ -229,7 +229,7 @@ export default function MedicalCalculator() {
 
             {/* Threshold Reference Indicator */}
             {parseFloat(hba1c) > 0 && (
-              <div className="border border-brand-400/30 rounded-lg p-4 bg-[#060515]/50 text-xs">
+              <div className="border border-brand-400/30 rounded-lg p-4 bg-surface-alt/50 text-xs">
                 <div className="font-semibold text-brand-800 mb-2">Clinical Interpretation Guidance:</div>
                 <div className="grid grid-cols-3 gap-2 text-center pt-2 text-[10px]">
                   <div className={`p-2 rounded border ${parseFloat(hba1c) < 5.7 ? 'bg-emerald-950/30 border-emerald-800/40 text-emerald-400 font-bold' : 'bg-brand-100/10 border-brand-300/10 text-slate-400'}`}>
@@ -271,7 +271,7 @@ export default function MedicalCalculator() {
             <div className="space-y-5">
               
               {/* Gender and Waist circumference with Unit Switcher */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 rounded-xl border border-brand-400/30 bg-[#060515]/40 shadow-inner">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 rounded-xl border border-brand-400/30 bg-surface-alt/40 shadow-inner">
                 <div className="space-y-2">
                   <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400">
                     1. Biological Marker Standards
@@ -348,7 +348,7 @@ export default function MedicalCalculator() {
                       placeholder={waistUnit === 'inches' ? 'e.g. 34' : 'e.g. 86'}
                       value={waist}
                       onChange={(e) => setWaist(e.target.value)}
-                      className="w-full pl-3 pr-16 py-2.5 text-sm rounded-lg border border-brand-400/40 bg-brand-200/50 text-white placeholder-slate-550 focus:bg-brand-200 focus:border-brand-800 outline-none focus:ring-1 focus:ring-brand-800 transition font-mono shadow-inner"
+                      className="w-full pl-3 pr-16 py-2.5 text-sm rounded-lg border border-brand-400/40 bg-brand-200/50 text-slate-100 placeholder-slate-550 focus:bg-brand-200 focus:border-brand-800 outline-none focus:ring-1 focus:ring-brand-800 transition font-mono shadow-inner"
                     />
                     <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-xs text-slate-500 font-bold uppercase font-mono">
                       {waistUnit}
@@ -382,7 +382,7 @@ export default function MedicalCalculator() {
                 </span>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <label className="flex items-start gap-2.5 p-3 bg-[#0c0a21]/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-[#0c0a21]/50">
+                  <label className="flex items-start gap-2.5 p-3 bg-surface-secondary/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-surface-secondary/50">
                     <input
                       type="checkbox"
                       checked={hasHighBP}
@@ -395,7 +395,7 @@ export default function MedicalCalculator() {
                     </div>
                   </label>
 
-                  <label className="flex items-start gap-2.5 p-3 bg-[#0c0a21]/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-[#0c0a21]/50">
+                  <label className="flex items-start gap-2.5 p-3 bg-surface-secondary/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-surface-secondary/50">
                     <input
                       type="checkbox"
                       checked={hasHighSugar}
@@ -408,7 +408,7 @@ export default function MedicalCalculator() {
                     </div>
                   </label>
 
-                  <label className="flex items-start gap-2.5 p-3 bg-[#0c0a21]/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-[#0c0a21]/50">
+                  <label className="flex items-start gap-2.5 p-3 bg-surface-secondary/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-surface-secondary/50">
                     <input
                       type="checkbox"
                       checked={hasHighTG}
@@ -421,7 +421,7 @@ export default function MedicalCalculator() {
                     </div>
                   </label>
 
-                  <label className="flex items-start gap-2.5 p-3 bg-[#0c0a21]/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-[#0c0a21]/50">
+                  <label className="flex items-start gap-2.5 p-3 bg-surface-secondary/30 border border-brand-400/35 rounded-xl text-xs leading-normal cursor-pointer hover:border-brand-800/60 transition hover:bg-surface-secondary/50">
                     <input
                       type="checkbox"
                       checked={hasLowHDL}
@@ -551,7 +551,7 @@ export default function MedicalCalculator() {
                     </span>
                   </div>
 
-                  <div className="p-5 bg-[#0a081f] space-y-4">
+                  <div className="p-5 bg-surface-primary space-y-4">
                     <p className="text-sm font-medium text-slate-300 leading-relaxed font-sans">
                       {riskAssessment.description}
                     </p>

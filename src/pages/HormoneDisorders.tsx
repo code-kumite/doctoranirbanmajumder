@@ -47,7 +47,7 @@ export default function HormoneDisorders({ onNavigate }: CareProps) {
       </div>
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-20 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-20 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30">
@@ -64,7 +64,7 @@ export default function HormoneDisorders({ onNavigate }: CareProps) {
       </section>
 
       {/* LONG DESCRIPTION INTRO */}
-      <section className="py-16 bg-[#030014] border-b border-brand-400/35">
+      <section className="py-16 bg-surface-primary border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -106,7 +106,7 @@ export default function HormoneDisorders({ onNavigate }: CareProps) {
       </section>
 
       {/* CORE SEGMENTS CARDS */}
-      <section className="py-16 sm:py-24 bg-[#060515] border-b border-brand-400/35" aria-label="Endocrine sub-specialties">
+      <section className="py-16 sm:py-24 bg-surface-alt border-b border-brand-400/35" aria-label="Endocrine sub-specialties">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -154,7 +154,7 @@ export default function HormoneDisorders({ onNavigate }: CareProps) {
       </section>
 
       {/* FAQS */}
-      <section className="py-16 sm:py-24 bg-[#030014] border-b border-brand-400/35" aria-labelledby="faq-section-heading">
+      <section className="py-16 sm:py-24 bg-surface-primary border-b border-brand-400/35" aria-labelledby="faq-section-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-3">
             <h2 id="faq-section-heading" className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight">
@@ -167,7 +167,7 @@ export default function HormoneDisorders({ onNavigate }: CareProps) {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-16 bg-[#060515] text-center">
+      <section className="py-16 bg-surface-alt text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
             Hormonal Equilibrium is Fundamental to Daily Health

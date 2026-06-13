@@ -60,7 +60,7 @@ export default function AboutClinic({ onNavigate }: AboutProps) {
       <JsonLd schema={aboutSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-semibold tracking-wider uppercase text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30">
@@ -77,7 +77,7 @@ export default function AboutClinic({ onNavigate }: AboutProps) {
       </section>
 
       {/* MISSION STRAPLINE */}
-      <section className="py-16 bg-[#030014] border-b border-brand-400/35">
+      <section className="py-16 bg-surface-primary border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -125,7 +125,7 @@ export default function AboutClinic({ onNavigate }: AboutProps) {
       </section>
 
       {/* CORE PHILOSOPHY SECTION */}
-      <section className="py-16 sm:py-24 bg-[#060515] border-b border-brand-400/35" aria-label="Care philosophy">
+      <section className="py-16 sm:py-24 bg-surface-alt border-b border-brand-400/35" aria-label="Care philosophy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-semibold text-brand-850 uppercase tracking-wider">
@@ -158,7 +158,7 @@ export default function AboutClinic({ onNavigate }: AboutProps) {
       </section>
 
       {/* MEET THE EXTENDED TEAM */}
-      <section className="py-16 bg-[#030014] border-b border-brand-400/35" aria-labelledby="team-heading">
+      <section className="py-16 bg-surface-primary border-b border-brand-400/35" aria-labelledby="team-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -210,7 +210,7 @@ export default function AboutClinic({ onNavigate }: AboutProps) {
       </section>
 
       {/* SEC FAQ BLOCK */}
-      <section className="py-16 sm:py-24 bg-[#060515]" aria-label="FAQ queries">
+      <section className="py-16 sm:py-24 bg-surface-alt" aria-label="FAQ queries">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight text-center">

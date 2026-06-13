@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Calendar, Activity, ChevronDown } from 'lucide-react';
+import { Menu, X, Calendar, Activity, ChevronDown, Sun, Moon } from 'lucide-react';
 import { CLINIC_INFO } from '../data';
 import { AppRoute } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'motion/react';
 interface HeaderProps {
   currentRoute: AppRoute;
   onNavigate: (route: AppRoute) => void;
+  theme: 'dark' | 'light';
+  onToggleTheme: () => void;
 }
 
 interface NavChild {
@@ -21,7 +23,7 @@ interface NavGroup {
   children?: NavChild[];
 }
 
-export default function Header({ currentRoute, onNavigate }: HeaderProps) {
+export default function Header({ currentRoute, onNavigate, theme, onToggleTheme }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -204,6 +206,13 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
           {/* CTA Book Button */}
           <div className="hidden lg:flex items-center gap-3">
             <button
+              onClick={onToggleTheme}
+              className="p-2 text-slate-400 hover:text-white bg-brand-400/25 hover:bg-brand-400/50 border border-brand-400/30 rounded-full transition-all duration-300 cursor-pointer shadow-inner flex items-center justify-center hover:scale-105 active:scale-95"
+              aria-label="Toggle dark/light theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-brand-900" />}
+            </button>
+            <button
               onClick={() => handleLinkClick('/contact')}
               className="flex items-center gap-1.5 px-4.5 py-2 bg-gradient-to-tr from-brand-900 to-brand-700 hover:from-brand-850 hover:to-brand-650 text-white rounded-full text-xs xl:text-sm font-semibold shadow-md shadow-brand-700/25 transition duration-150 cursor-pointer whitespace-nowrap border border-brand-800/30 hover:scale-[1.02]"
             >
@@ -213,13 +222,21 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
           </div>
 
           {/* Mobile Menu Actions */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={onToggleTheme}
+              className="p-2.5 text-slate-400 hover:text-white bg-brand-400/25 hover:bg-brand-400/40 border border-brand-400/30 rounded-lg transition flex items-center justify-center cursor-pointer"
+              aria-label="Toggle dark/light theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4.5 h-4.5 text-amber-400" /> : <Moon className="w-4.5 h-4.5 text-brand-900" />}
+            </button>
+
             <button
               onClick={() => handleLinkClick('/contact')}
               className="flex items-center justify-center p-2.5 bg-gradient-to-tr from-brand-900 to-brand-700 hover:from-brand-850 hover:to-brand-650 text-white rounded-lg text-xs font-semibold shadow-xs transition"
               aria-label="Book appointment"
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4.5 h-4.5" />
             </button>
 
             <button

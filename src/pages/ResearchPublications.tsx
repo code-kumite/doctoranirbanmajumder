@@ -70,7 +70,7 @@ export default function ResearchPublications({ onNavigate }: ResearchProps) {
       <JsonLd schema={researchSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30 inline-block">
@@ -87,7 +87,7 @@ export default function ResearchPublications({ onNavigate }: ResearchProps) {
       </section>
 
       {/* COMPLIANCE WARNING */}
-      <section className="py-6 bg-[#030014]/50 border-b border-brand-400/20">
+      <section className="py-6 bg-surface-primary/50 border-b border-brand-400/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs font-medium text-slate-400 leading-relaxed max-w-4xl flex gap-2">
           <ShieldCheck className="w-5 h-5 text-brand-800 shrink-0 mt-0.5" />
           <span>
@@ -97,7 +97,7 @@ export default function ResearchPublications({ onNavigate }: ResearchProps) {
       </section>
 
       {/* INTERACTIVE SEARCH & CATEGORIES */}
-      <section className="py-12 bg-[#030014]">
+      <section className="py-12 bg-surface-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 justify-between items-stretch lg:items-center border-b border-brand-400/20 pb-8 mb-10">
             
@@ -203,7 +203,7 @@ export default function ResearchPublications({ onNavigate }: ResearchProps) {
       </section>
 
       {/* CTA ARCHIVE */}
-      <section className="py-16 bg-[#060515] border-t border-brand-400/35 text-center">
+      <section className="py-16 bg-surface-alt border-t border-brand-400/35 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
             Collaborative Endocrine Research

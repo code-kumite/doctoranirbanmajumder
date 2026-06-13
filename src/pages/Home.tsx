@@ -191,7 +191,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="relative overflow-hidden aspect-[16/11] sm:aspect-[16/9] lg:aspect-[4/3] group">
                 
                 {/* Dynamic radial gradient glow directly in background */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#1a163f]/60 via-[#120f2d]/30 to-brand-900/15 rounded-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-card-gradient-from/60 via-card-gradient-via/30 to-brand-900/15 rounded-2xl" />
                 
                 {/* SVG High-Tech Composition */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none z-10 animate-fadeIn" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
@@ -338,40 +338,47 @@ export default function Home({ onNavigate }: HomeProps) {
                 </div>
               </div>
 
-              {/* Flat Timings & Location Section with vertical separator */}
-              <div className="grid grid-cols-2 gap-6 pt-5 border-t border-brand-400/20">
-                {/* Timings */}
-                <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-brand-800">
-                    <Clock className="w-4 h-4 shrink-0" />
-                    <span className="font-bold text-slate-200 font-serif text-xs">Clinic Hours</span>
-                  </div>
-                  <div className="space-y-0.5">
-                    <p className="text-[11px] text-slate-400 leading-tight font-medium">{CLINIC_INFO.workingHours}</p>
-                    <p className="text-[10px] text-red-400 font-semibold leading-none">{CLINIC_INFO.closedDays}</p>
-                  </div>
-                </div>
-                {/* Location */}
-                <div 
-                  onClick={() => onNavigate('/contact')}
-                  className="space-y-1.5 border-l border-brand-400/20 pl-6 cursor-pointer group/loc"
-                >
-                  <div className="flex items-center gap-2 text-brand-800 group-hover/loc:text-brand-700 transition">
-                    <MapPin className="w-4 h-4 shrink-0" />
-                    <span className="font-bold text-slate-200 font-serif text-xs">Dhakuria Clinic</span>
-                  </div>
-                  <p className="text-[11px] text-slate-400 leading-snug">{CLINIC_INFO.address.split(',')[0]}, Dhakuria</p>
-                </div>
-              </div>
-
             </motion.div>
 
           </div>
         </div>
       </section>
 
+      {/* CLINIC TIMINGS & LOCATION QUICK BANNER */}
+      <section className="bg-surface-alt border-b border-brand-400/20 py-6 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center divide-y md:divide-y-0 md:divide-x divide-brand-400/20">
+            {/* Timings */}
+            <div className="flex items-center gap-4 py-2 md:py-0 md:pr-8">
+              <div className="w-10 h-10 rounded-full bg-brand-900/10 border border-brand-800/20 flex items-center justify-center text-brand-800 shrink-0">
+                <Clock className="w-5 h-5" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Clinic Consultation Hours</span>
+                <p className="text-sm font-semibold text-slate-200">{CLINIC_INFO.workingHours}</p>
+                <p className="text-xs text-red-400 font-semibold leading-none">{CLINIC_INFO.closedDays}</p>
+              </div>
+            </div>
+            {/* Location */}
+            <div 
+              onClick={() => onNavigate('/contact')}
+              className="flex items-center gap-4 py-3 md:py-0 md:pl-8 cursor-pointer group select-none"
+            >
+              <div className="w-10 h-10 rounded-full bg-brand-900/10 border border-brand-800/20 flex items-center justify-center text-brand-800 shrink-0 group-hover:bg-brand-900/25 transition">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider group-hover:text-brand-800 transition">Dhakuria Clinic Location</span>
+                <p className="text-sm font-semibold text-slate-200 group-hover:underline">{CLINIC_INFO.address.split(',')[0]}, Dhakuria</p>
+                <p className="text-xs text-slate-400 leading-none">Click to view directions and Google Map</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* COMPREHENSIVE TRUST ELEMENTS SECTION */}
-      <section className="py-16 sm:py-24 bg-[#060515] relative z-10 border-b border-brand-400/30" aria-labelledby="trust-section-heading">
+      <section className="py-16 sm:py-24 bg-surface-alt relative z-10 border-b border-brand-400/30" aria-labelledby="trust-section-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -452,7 +459,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SERVICES SUMMARY - SLEEK BOOTSTRAP LIST-GROUP/ROW GRID OVERHAUL */}
-      <section className="py-16 sm:py-24 bg-[#030014] relative z-10 border-b border-brand-400/30" aria-labelledby="focus-section-heading">
+      <section className="py-16 sm:py-24 bg-surface-primary relative z-10 border-b border-brand-400/30" aria-labelledby="focus-section-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div className="space-y-3">
@@ -513,7 +520,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* INTERACTIVE CLINICAL SCREENER TOOLS */}
-      <section className="py-16 sm:py-24 bg-[#060515] relative z-10 border-b border-brand-400/30" aria-labelledby="tools-section-heading">
+      <section className="py-16 sm:py-24 bg-surface-alt relative z-10 border-b border-brand-400/30" aria-labelledby="tools-section-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -565,7 +572,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* LOCAL SEO CORE HIGHLIGHT */}
-      <section className="py-16 bg-[#030014] relative z-10 border-b border-brand-400/30" aria-label="Local clinic details">
+      <section className="py-16 bg-surface-primary relative z-10 border-b border-brand-400/30" aria-label="Local clinic details">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-100/40 backdrop-blur-md rounded-xl border border-brand-400/40 p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8 shadow-2xl">
             <div className="lg:col-span-2 space-y-4">
@@ -605,7 +612,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* FAQS ACCORDION */}
-      <section className="py-16 sm:py-24 bg-[#060515] relative z-10" aria-labelledby="faq-section-title">
+      <section className="py-16 sm:py-24 bg-surface-alt relative z-10" aria-labelledby="faq-section-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-4">
             <span className="text-xs font-semibold text-brand-850 uppercase tracking-wider bg-brand-900/35 border border-brand-800/40 px-3 py-1.5 rounded-full">

@@ -59,7 +59,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
 
   if (submitted) {
     return (
-      <div className="bg-[#0c0a21]/80 backdrop-blur-md rounded-xl border border-brand-400/40 p-6 sm:p-8 animate-fadeIn text-slate-200 shadow-2xl relative z-10">
+      <div className="bg-surface-secondary backdrop-blur-md rounded-xl border border-brand-400/40 p-6 sm:p-8 animate-fadeIn text-slate-200 shadow-2xl relative z-10">
         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-900/35 border border-brand-850/45 text-brand-800 mb-6 mx-auto">
           <CheckCircle className="w-6 h-6 animate-pulse" />
         </div>
@@ -125,7 +125,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-[#0c0a21]/80 backdrop-blur-md rounded-xl border border-brand-400/40 p-5 sm:p-7 text-slate-200 shadow-2xl relative z-10">
+    <form onSubmit={handleSubmit} className="bg-surface-secondary backdrop-blur-md rounded-xl border border-brand-400/40 p-5 sm:p-7 text-slate-200 shadow-2xl relative z-10">
       {!compact && (
         <div className="mb-6">
           <h3 className="text-lg sm:text-xl font-serif text-slate-100 font-bold mb-1">
@@ -160,7 +160,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
               placeholder="e.g., Animesh Das"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-white placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-sans"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-slate-100 placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-sans"
               aria-label="Patient Full Name"
             />
           </div>
@@ -182,7 +182,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
               placeholder="e.g., +91 9830000000"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-white placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-mono"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-slate-100 placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-mono"
               aria-label="Contact Mobile or Landline Number"
             />
           </div>
@@ -203,7 +203,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
               placeholder="e.g., email@domain.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-white placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-sans"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-slate-100 placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-sans"
               aria-label="Email Address"
             />
           </div>
@@ -225,7 +225,7 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
               value={date}
               min={new Date().toISOString().split('T')[0]}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-white placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-mono cursor-pointer"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/50 border border-brand-400/40 text-slate-100 placeholder-slate-500 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition font-mono cursor-pointer"
               aria-label="Preferred Consultation Date"
             />
           </div>
@@ -244,16 +244,16 @@ export default function AppointmentForm({ onSuccess, compact = false }: Appointm
               id="clinicalConcern"
               value={concern}
               onChange={(e) => setConcern(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/60 border border-brand-400/40 text-white focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition appearance-none cursor-pointer font-sans"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-brand-200/60 border border-brand-400/40 text-slate-100 focus:bg-brand-200 focus:border-brand-800 outline-none rounded-lg focus:ring-1 focus:ring-brand-800 transition appearance-none cursor-pointer font-sans"
               aria-label="Primary Clinical Concern"
             >
-              <option value="Diabetes Evaluation" className="bg-[#0a081f] text-white">Diabetes Evaluation & Monitoring</option>
-              <option value="Thyroid Dysfunction" className="bg-[#0a081f] text-white">Thyroid Profile & Treatment</option>
-              <option value="Obesity & Metabolic" className="bg-[#0a081f] text-white">Obesity & Weight Management</option>
-              <option value="Hormonal Disorders" className="bg-[#0a081f] text-white">Hormone Disorders (Hirsutism/Hypogonadism)</option>
-              <option value="Bone Health" className="bg-[#0a081f] text-white">Osteoporosis & Bone Care</option>
-              <option value="DSME Programme" className="bg-[#0a081f] text-white">DSME Camp Registration</option>
-              <option value="Other Consultations" className="bg-[#0a081f] text-white">General Endocrine Consultation</option>
+              <option value="Diabetes Evaluation" className="bg-surface-primary text-slate-100">Diabetes Evaluation & Monitoring</option>
+              <option value="Thyroid Dysfunction" className="bg-surface-primary text-slate-100">Thyroid Profile & Treatment</option>
+              <option value="Obesity & Metabolic" className="bg-surface-primary text-slate-100">Obesity & Weight Management</option>
+              <option value="Hormonal Disorders" className="bg-surface-primary text-slate-100">Hormone Disorders (Hirsutism/Hypogonadism)</option>
+              <option value="Bone Health" className="bg-surface-primary text-slate-100">Osteoporosis & Bone Care</option>
+              <option value="DSME Programme" className="bg-surface-primary text-slate-100">DSME Camp Registration</option>
+              <option value="Other Consultations" className="bg-surface-primary text-slate-100">General Endocrine Consultation</option>
             </select>
           </div>
         </div>

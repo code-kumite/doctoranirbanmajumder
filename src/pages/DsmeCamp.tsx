@@ -41,7 +41,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       <JsonLd schema={campSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30 inline-block">
@@ -58,7 +58,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* LOGISTICS CARD DECK */}
-      <section className="py-12 bg-[#030014] border-b border-brand-400/35">
+      <section className="py-12 bg-surface-primary border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             
@@ -101,7 +101,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* SCHEDULE TIMELINE */}
-      <section className="py-16 bg-[#060515] border-b border-brand-400/35">
+      <section className="py-16 bg-surface-alt border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -152,7 +152,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* LAB INVESTIGATIONS */}
-      <section className="py-16 sm:py-24 bg-[#030014] border-b border-brand-400/35" aria-labelledby="lab-investigations-heading">
+      <section className="py-16 sm:py-24 bg-surface-primary border-b border-brand-400/35" aria-labelledby="lab-investigations-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30">Clinical Parameters</span>
@@ -176,7 +176,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* INCLUDED NEUROLOGICAL & FOOT ASSESSMENTS */}
-      <section className="py-16 bg-[#060515] border-b border-brand-400/35" aria-labelledby="other-assessments-heading">
+      <section className="py-16 bg-surface-alt border-b border-brand-400/35" aria-labelledby="other-assessments-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30">Device Screen Testing</span>
@@ -206,7 +206,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* FAQS ACCORDION */}
-      <section className="py-16 bg-[#030014]" aria-labelledby="faq-title">
+      <section className="py-16 bg-surface-primary" aria-labelledby="faq-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 space-y-3">
             <h2 id="faq-title" className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight text-center">
@@ -219,7 +219,7 @@ export default function DsmeCamp({ onNavigate }: CampProps) {
       </section>
 
       {/* CONTACT */}
-      <section className="py-16 bg-[#060515] text-center border-t border-brand-400/30">
+      <section className="py-16 bg-surface-alt text-center border-t border-brand-400/30">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-100">
             Enroll for the Next Structured DSME Saturday

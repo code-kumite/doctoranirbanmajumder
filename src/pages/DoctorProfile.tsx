@@ -40,7 +40,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       <JsonLd schema={doctorSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -89,7 +89,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       </section>
 
       {/* CREDENTIAL TIMELINE SECTION */}
-      <section className="py-16 sm:py-24 bg-[#030014] border-b border-brand-400/35" aria-label="Credentials timeline">
+      <section className="py-16 sm:py-24 bg-surface-primary border-b border-brand-400/35" aria-label="Credentials timeline">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-brand-850 bg-brand-900/30 px-3.5 py-1 rounded-full border border-brand-850/30">Medical Schooling</span>
@@ -102,7 +102,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
             {DOCTOR_CREDENTIALS.map((cred, idx) => (
               <div key={idx} className="relative">
                 {/* Bullet */}
-                <div className="absolute -left-[31px] top-1 w-4 border-2 border-brand-800 h-4 rounded-full bg-[#030014] flex items-center justify-center animate-pulse" />
+                <div className="absolute -left-[31px] top-1 w-4 border-2 border-brand-800 h-4 rounded-full bg-surface-primary flex items-center justify-center animate-pulse" />
                 
                 <div className="max-w-3xl space-y-1.5">
                   <span className="text-xs font-mono font-bold bg-brand-900/40 text-brand-800 px-2.5 py-0.5 rounded border border-brand-850/30">
@@ -125,7 +125,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       </section>
 
       {/* ACADEMIC & CLINICAL APPOINTMENTS */}
-      <section className="py-16 bg-[#060515] border-b border-brand-400/35" aria-label="Academic roles">
+      <section className="py-16 bg-surface-alt border-b border-brand-400/35" aria-label="Academic roles">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -172,7 +172,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       </section>
 
       {/* AWARDS & RECOGNITIONS */}
-      <section className="py-16 sm:py-24 bg-[#030014] border-b border-brand-400/35" aria-label="Awards">
+      <section className="py-16 sm:py-24 bg-surface-primary border-b border-brand-400/35" aria-label="Awards">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3">
             <span className="text-xs font-semibold tracking-wider text-brand-850 uppercase bg-brand-900/30 px-3.5 py-1 rounded-full border border-brand-850/30">Recognized Contributions</span>
@@ -205,7 +205,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       </section>
 
       {/* MEMBERSHIPS AND OVERSEAS TRAINING */}
-      <section className="py-16 bg-[#060515] border-b border-brand-400/35" aria-labelledby="memberships-title">
+      <section className="py-16 bg-surface-alt border-b border-brand-400/35" aria-labelledby="memberships-title">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
@@ -262,7 +262,7 @@ export default function DoctorProfile({ onNavigate }: ProfileProps) {
       </section>
 
       {/* CTA BOOK PROFILE */}
-      <section className="py-16 bg-[#030014] text-center">
+      <section className="py-16 bg-surface-primary text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight font-serif">
             Schedule a Private Clinical Consultation

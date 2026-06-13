@@ -40,7 +40,7 @@ export default function ServicesOverview({ onNavigate }: ServicesHubProps) {
       <JsonLd schema={servicesSchema} />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-b from-[#0a081f] to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
+      <section className="bg-gradient-to-b from-brand-200 to-brand-950 text-white py-16 sm:py-24 border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-semibold text-brand-850 bg-brand-900/30 px-3.5 py-1.5 rounded-full border border-brand-850/30 inline-block">
@@ -57,7 +57,7 @@ export default function ServicesOverview({ onNavigate }: ServicesHubProps) {
       </section>
 
       {/* CORE INTRO STRAPLINE */}
-      <section className="py-16 bg-[#030014] border-b border-brand-400/35">
+      <section className="py-16 bg-surface-primary border-b border-brand-400/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl space-y-4">
             <h2 className="text-2xl sm:text-3xl font-serif text-slate-100 font-bold tracking-tight leading-snug">
@@ -74,7 +74,7 @@ export default function ServicesOverview({ onNavigate }: ServicesHubProps) {
       </section>
 
       {/* SERVICES DIRECTORY BOOTSTRAP LIST-GROUP OVERHAUL */}
-      <section className="py-16 bg-[#060515] border-b border-brand-400/35" aria-labelledby="hub-directory-heading">
+      <section className="py-16 bg-surface-alt border-b border-brand-400/35" aria-labelledby="hub-directory-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="hub-directory-heading" className="sr-only">Services Directory</h2>
           
@@ -116,7 +116,7 @@ export default function ServicesOverview({ onNavigate }: ServicesHubProps) {
       </section>
 
       {/* ALLIED SERVICES SUBBLOCK */}
-      <section className="py-16 bg-[#030014]" aria-labelledby="allied-heading">
+      <section className="py-16 bg-surface-primary" aria-labelledby="allied-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-100/40 backdrop-blur-md rounded-xl border border-brand-400/35 p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8 shadow-2xl">
             
@@ -144,7 +144,7 @@ export default function ServicesOverview({ onNavigate }: ServicesHubProps) {
       </section>
 
       {/* FOOT CTA */}
-      <section className="py-16 bg-[#060515] border-t border-brand-400/35 text-center">
+      <section className="py-16 bg-surface-alt border-t border-brand-400/35 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           <h3 className="text-xl sm:text-2xl font-serif text-slate-100 font-bold tracking-tight font-serif">
             Personalized Clinical Consultation
