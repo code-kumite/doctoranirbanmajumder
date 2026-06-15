@@ -127,8 +127,8 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                     onClick={() => handleLinkClick(group.route!)}
                     className={`px-2.5 py-1.5 rounded-lg text-xs xl:text-[13px] font-semibold tracking-wide cursor-pointer transition relative whitespace-nowrap ${
                       isCurrentActive
-                        ? 'text-white font-bold'
-                        : 'text-slate-400 hover:text-white hover:bg-brand-400/20'
+                        ? 'text-slate-100 font-bold'
+                        : 'text-slate-400 hover:text-slate-100 hover:bg-brand-400/20'
                     }`}
                   >
                     <span className="relative z-10">{group.label}</span>
@@ -153,8 +153,8 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                   <button
                     className={`px-2.5 py-1.5 rounded-lg text-xs xl:text-[13px] font-semibold tracking-wide cursor-pointer transition flex items-center gap-1 whitespace-nowrap ${
                       isCurrentActive
-                        ? 'text-white font-bold bg-brand-400/30 border border-brand-800/20'
-                        : 'text-slate-400 hover:text-white hover:bg-brand-400/20'
+                        ? 'text-slate-100 font-bold bg-brand-400/30 border border-brand-800/20'
+                        : 'text-slate-400 hover:text-slate-100 hover:bg-brand-400/20'
                     }`}
                     aria-expanded={activeDropdown === group.label}
                     aria-haspopup="true"
@@ -183,7 +183,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                               }`}
                             >
                               <span className={`text-xs font-bold leading-tight transition-colors ${
-                                isChildCurrent ? 'text-white' : 'text-slate-300 group-hover/item:text-brand-800'
+                                isChildCurrent ? 'text-slate-100' : 'text-slate-300 group-hover/item:text-brand-800'
                               }`}>
                                 {child.label}
                               </span>
@@ -257,8 +257,8 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                       onClick={() => handleLinkClick(group.route!)}
                       className={`w-full text-left px-4 py-3 rounded-lg text-sm font-semibold transition ${
                         isCurrentActive
-                          ? 'bg-brand-900/40 text-white border-l-4 border-brand-800 rounded-l-none font-bold'
-                          : 'text-slate-400 hover:bg-brand-400/10 hover:text-white'
+                          ? 'bg-brand-900/40 text-slate-100 border-l-4 border-brand-800 rounded-l-none font-bold'
+                          : 'text-slate-400 hover:bg-brand-400/10 hover:text-slate-100'
                       }`}
                     >
                       {group.label}
@@ -273,7 +273,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                     <button
                       onClick={() => setMobileExpandedGroup(isExpanded ? null : group.label)}
                       className={`w-full text-left px-4 py-3 font-semibold text-sm transition flex justify-between items-center ${
-                        isCurrentActive ? 'text-white bg-brand-900/20' : 'text-slate-400'
+                        isCurrentActive ? 'text-slate-100 bg-brand-900/20' : 'text-slate-400'
                       }`}
                     >
                       <span>{group.label}</span>
@@ -298,8 +298,8 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                                   onClick={() => handleLinkClick(child.route)}
                                   className={`w-full text-left px-4 py-2.5 rounded-md text-xs font-medium transition ${
                                     isChildActive
-                                      ? 'text-white font-bold bg-brand-900/30'
-                                      : 'text-slate-400 hover:text-white hover:bg-brand-400/10'
+                                      ? 'text-slate-100 font-bold bg-brand-900/30'
+                                      : 'text-slate-400 hover:text-slate-100 hover:bg-brand-400/10'
                                   }`}
                                 >
                                   {child.label}
